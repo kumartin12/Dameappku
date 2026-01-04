@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Vývoj na Míru | Martin - SwiftUI Developer</title>
+    <meta name="description" content="Profesionální vývoj iOS aplikací v SwiftUI. Publikované aplikace v App Store s tisíci uživateli.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .app-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .app-card h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+        }
+        
+        .app-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .app-store-badge img {
+            height: 40px;
+        }
+        
+        .services {
+            list-style: none;
+        }
+        
+        .services li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1em;
+        }
+        
+        .services li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .services li:last-child {
+            border-bottom: none;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vyvíjím iOS aplikace na míru</h1>
+            <p class="subtitle">SwiftUI • MapKit • API integrace • Real-time aplikace</p>
+        </header>
+
+        <div class="section">
+            <h2>O mně</h2>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                Jsem Martin, iOS vývojář se specializací na SwiftUI a nativní iOS aplikace. 
+                Mám několik publikovaných aplikací v App Store s aktivními uživateli po celém světě. 
+                Specializuji se na aplikace vyžadující real-time zpracování dat, GPS integraci a pokročilé API komunikace.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Publikované aplikace</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>CB Cluster DX</h3>
+                    <p>Real-time monitoring CB DX spotů s integracií CRX Network API. MapKit vizualizace propagace signálu.</p>
+                    <a href="https://apps.apple.com/us/app/cb-ham-dx-cluster/id6755640584" class="app-store-badge" target="_blank">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
+                    </a>
+                </div>
+                
+                <div class="app-card">
+                    <h3>TropoDX</h3>
+                    <p>Sledování troposférické propagace s výpočty propagačních podmínek a meteorologickými daty.</p>
+                    <a href="https://apps.apple.com/us/app/tropodx/id6754292117" class="app-store-badge" target="_blank">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
+                    </a>
+                </div>
+                
+                <div class="app-card">
+                    <h3>Locator DX</h3>
+                    <p>Nástroje pro práci s Maidenhead grid lokátory, včetně GPS integrace a mapových výpočtů.</p>
+                    <a href="https://apps.apple.com/us/app/locator-dx/id6756209072" class="app-store-badge" target="_blank">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on App Store">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Co nabízím</h2>
+            <ul class="services">
+                <li>Vývoj nativních iOS aplikací v SwiftUI</li>
+                <li>Integrace s REST API a real-time službami</li>
+                <li>MapKit a GPS lokalizační služby</li>
+                <li>Komplexní matematické výpočty v aplikacích</li>
+                <li>Publikace aplikací do App Store</li>
+                <li>Údržba a aktualizace stávajících aplikací</li>
+                <li>Konzultace a návrh architektury aplikace</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technologie</h2>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                <strong>Swift</strong> • <strong>SwiftUI</strong> • MapKit • Core Location • 
+                URLSession • Combine • Background Processing • Push Notifications • 
+                UserDefaults • FileManager • JSON Parsing • Git
+            </p>
+        </div>
+
+        <div class="contact">
+            <h2 style="margin-bottom: 20px;">Máte projekt?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px; color: #666;">
+                Napište mi a probereme vaše požadavky
+            </p>
+            <a href="mailto:vyvoj@dameappku.cz" class="contact-button">Nezávazná konzultace</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Martin - iOS Developer | dameappku.cz</p>
+        </footer>
+    </div>
+</body>
+</html>
